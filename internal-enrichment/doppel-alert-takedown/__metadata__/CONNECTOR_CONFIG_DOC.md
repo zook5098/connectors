@@ -7,7 +7,7 @@ Below is an exhaustive enumeration of all configurable parameters available, eac
 | Property | Type | Required | Possible values | Default | Description |
 | -------- | ---- | -------- | --------------- | ------- | ----------- |
 | OPENCTI_URL | `string` | ✅ | Format: [`uri`](https://json-schema.org/understanding-json-schema/reference/string#built-in-formats) |  | The base URL of the OpenCTI instance. |
-| OPENCTI_TOKEN | `string` | ✅ | string |  | The API token to connect to OpenCTI. |
+| OPENCTI_TOKEN | `string` | ✅ | Format: [`password`](https://json-schema.org/understanding-json-schema/reference/string#built-in-formats) |  | The API token to connect to OpenCTI. |
 | DOPPEL_ALERT_TAKEDOWN_API_KEY | `string` | ✅ | Format: [`password`](https://json-schema.org/understanding-json-schema/reference/string#built-in-formats) |  | Doppel API key, sent as the `x-api-key` header. |
 | DOPPEL_ALERT_TAKEDOWN_USER_API_KEY | `string` | ✅ | Format: [`password`](https://json-schema.org/understanding-json-schema/reference/string#built-in-formats) |  | Doppel user API key, sent as the `x-user-api-key` header. |
 | CONNECTOR_NAME | `string` |  | string | `"Doppel Alert and Takedown"` | The name of the connector. |
@@ -17,5 +17,5 @@ Below is an exhaustive enumeration of all configurable parameters available, eac
 | CONNECTOR_AUTO | `boolean` |  | boolean | `false` | Whether the connector should run automatically when an entity is created or updated. |
 | DOPPEL_ALERT_TAKEDOWN_API_BASE_URL | `string` |  | Format: [`uri`](https://json-schema.org/understanding-json-schema/reference/string#built-in-formats) | `"https://api.doppel.com/"` | Doppel API base URL. |
 | DOPPEL_ALERT_TAKEDOWN_TAGS | `array` |  | string | `[]` | List of tags to attach to the alerts created in Doppel. |
-| DOPPEL_ALERT_TAKEDOWN_TAKEDOWN_COMMENT | `string` |  | string | `"Confirmed by OpenCTI \u2014 requesting takedown."` | Comment sent to Doppel when requesting a takedown. |
+| DOPPEL_ALERT_TAKEDOWN_TAKEDOWN_COMMENT | `string` |  | string | `"Confirmed by OpenCTI — requesting takedown."` | Comment sent to Doppel when requesting a takedown. |
 | DOPPEL_ALERT_TAKEDOWN_MAX_TLP | `string` |  | `TLP:CLEAR` `TLP:WHITE` `TLP:GREEN` `TLP:AMBER` `TLP:AMBER+STRICT` `TLP:RED` | `"TLP:RED"` | Max TLP level of entities to enrich. |
